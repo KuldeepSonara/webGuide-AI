@@ -20,12 +20,6 @@ interface SitemapElement {
   text?: string; // Added optional 'text' property
 }
 
-// Comment out Gemini API key
-// const GEMINI_API_KEY = "GeminiKey";
-
-// Add GPT-4 API key
-// const OPENAI_API_KEY = "GTP- key"; // Replace with your actual OpenAI API key securely
-
 document.addEventListener("DOMContentLoaded", () => {
   const guideButton = document.getElementById("submit") as HTMLButtonElement;
   const outputDiv = document.getElementById("guide-output") as HTMLDivElement;
