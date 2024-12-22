@@ -24,7 +24,7 @@ interface SitemapElement {
 // const GEMINI_API_KEY = "GeminiKey";
 
 // Add GPT-4 API key
-const OPENAI_API_KEY = "GTP- key"; // Replace with your actual OpenAI API key securely
+// const OPENAI_API_KEY = "GTP- key"; // Replace with your actual OpenAI API key securely
 
 document.addEventListener("DOMContentLoaded", () => {
   const guideButton = document.getElementById("submit") as HTMLButtonElement;
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_API_KEY}`,
+            // Authorization: `Bearer ${OPENAI_API_KEY}`,
           },
           body: JSON.stringify(payload),
         }
