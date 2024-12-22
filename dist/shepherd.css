@@ -1,0 +1,5 @@
+/* Copy the Shepherd.js CSS content from node_modules/shepherd.js/dist/css/shepherd.css */
+/* ...existing Shepherd.js CSS... */
+
+/* Example: */
+@import "shepherd.js/dist/css/shepherd.css";

@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "WebGuide AI Extension",
+  "description": "Interactive guide for any website",
+  "version": "1.0",
+  "permissions": ["activeTab", "tabs", "storage", "scripting"],
+  "host_permissions": ["https://api.openai.com/*"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.js", "guide.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

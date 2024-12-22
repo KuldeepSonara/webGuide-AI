@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGuide AI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fc;
+        margin: 0;
+        padding: 20px;
+        width: 320px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        font-size: 24px;
+        color: #357abd;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #357abd;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      button:hover {
+        background-color: #2a5d9e;
+      }
+      #loading {
+        display: none;
+        text-align: center;
+        color: #4a90e2;
+        margin-top: 10px;
+      }
+      #guide-output {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e7f3ff;
+        border-radius: 8px;
+        height: 300px;
+        overflow-y: auto;
+        font-size: 13px;
+        color: #333;
+        white-space: pre-wrap;
+        width: 100%;
+        line-height: 1.4;
+        font-family: "Consolas", monospace;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #guide-output::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      #guide-output::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      #guide-output::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      .spinner {
+        margin-right: 5px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #8ca0bd;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        animation: spin 1.2s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Remove External Shepherd.js CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/shepherd.js/dist/css/shepherd.css"
+    /> -->
+
+    <!-- Add Shepherd.js CSS Locally -->
+    <link rel="stylesheet" href="shepherd.css" />
+  </head>
+  <body>
+    <h1>WebGuide AI</h1>
+    <input type="text" id="query" placeholder="Enter your query" />
+    <button id="submit">Get Guide</button>
+    <button id="generate-sitemap">Generate Sitemap</button>
+
+    <!-- Add Download Sitemap Icon -->
+    <span
+      id="download-sitemap"
+      style="cursor: pointer; margin-left: 10px"
+      title="Download Sitemap"
+      aria-label="Download Sitemap"
+    >
+      <!-- SVG Download Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M.5 9.9a.5.5 0 0 1 .5-.5h3.95V.5a.5.5 0 0 1 1 0v9.9h3.95a.5.5 0 0 1 0 1H5.45a.5.5 0 0 1-.5-.5V1.5h-3v8.9a.5.5 0 0 1-.5.5h-1z"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 1-.5-.5V3.707l-2.147 2.146a.5.5 0 0 1-.708-.708l3-3a.5.5 0 1 1 .708.708L8.5 3.707V14.5A.5.5 0 0 1 8 15z"
+        />
+      </svg>
+    </span>
+
+    <div id="loading">Loading...</div>
+    <div id="guide-output"></div>
+
+    <!-- Add Shepherd.js Library Locally -->
+    <!-- <script src="shepherd.min.js"></script> -->
+    <!-- <script type="module" src="popup.js"></script> -->
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
+
+  </body>
+</html>

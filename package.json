@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "build": "tsc -w && yarn copy-files",
+    "copy-files": "copyfiles -u 1 public/**/* dist/public",
+    "generate-sitemap": "ts-node src/sitemap.ts"
+  },
+  "dependencies": {
+    "intro.js": "^7.2.0",
+    "puppeteer": "^23.10.4",
+    "shepherd.js": "^14.3.0"
+  },
+  "license": "MIT"
+}
